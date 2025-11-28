@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="vinylGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#9333ea"/>
+    </linearGradient>
+  </defs>
+  <!-- Vinyl disc -->
+  <circle cx="16" cy="16" r="15" fill="#1a1a2e"/>
+  <!-- Grooves -->
+  <circle cx="16" cy="16" r="12" fill="none" stroke="#2a2a3e" stroke-width="0.5"/>
+  <circle cx="16" cy="16" r="10" fill="none" stroke="#2a2a3e" stroke-width="0.5"/>
+  <circle cx="16" cy="16" r="8" fill="none" stroke="#2a2a3e" stroke-width="0.5"/>
+  <!-- Label -->
+  <circle cx="16" cy="16" r="5" fill="url(#vinylGradient)"/>
+  <!-- Center hole -->
+  <circle cx="16" cy="16" r="1.5" fill="#0a0a0f"/>
+  <!-- Shine effect -->
+  <ellipse cx="12" cy="10" rx="3" ry="2" fill="white" opacity="0.1" transform="rotate(-30 12 10)"/>
+</svg>

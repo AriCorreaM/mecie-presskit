@@ -1,16 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Instagram, Music2, Music } from 'lucide-react';
+import { Mail, Instagram, Music2, Music, Youtube } from 'lucide-react';
 import { artist } from '@/data/artist';
 import SectionTitle from './SectionTitle';
 
 export default function Contact() {
-  const mailtoLink = `mailto:${artist.email}?subject=${encodeURIComponent(
-    'Booking Request - Mecie'
-  )}&body=${encodeURIComponent(
-    'Hola Mecie,\n\nMe gustaría contactarte para un booking.\n\nNombre: \nFecha: \nVenue/Evento: \nMensaje: \n\nSaludos'
-  )}`;
+  const mailtoLink = `mailto:${artist.email}`;
 
   const socialLinks = [
     {
@@ -26,6 +22,12 @@ export default function Contact() {
       color: 'hover:text-orange-500',
     },
     {
+      name: 'YouTube',
+      href: artist.social.youtube,
+      icon: Youtube,
+      color: 'hover:text-red-500',
+    },
+    {
       name: 'Spotify',
       href: artist.social.spotify,
       icon: Music,
@@ -34,9 +36,9 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="section bg-[var(--background-secondary)]">
+    <section id="booking" className="section bg-[var(--background-secondary)]">
       <div className="mx-auto max-w-2xl text-center">
-        <SectionTitle title="Contact" subtitle="Get in touch for bookings" />
+        <SectionTitle title="Booking" />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,19 +50,8 @@ export default function Contact() {
           {/* Main CTA button */}
           <a href={mailtoLink} className="btn-primary inline-flex text-lg">
             <Mail size={20} />
-            Contact for Booking
+            {artist.email}
           </a>
-
-          {/* Email display */}
-          <p className="text-[var(--text-secondary)]">
-            or email directly at{' '}
-            <a
-              href={`mailto:${artist.email}`}
-              className="text-[var(--accent-cyan)] transition-colors hover:text-[var(--accent-purple)]"
-            >
-              {artist.email}
-            </a>
-          </p>
 
           {/* Social links */}
           <div className="flex justify-center gap-6 pt-4">
