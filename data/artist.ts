@@ -71,10 +71,39 @@ export const artist = {
 		'2x Monitores estéreo de alta calidad + Subwoofer',
 	],
 
+	releases: [
+		{
+			title: 'Track Title 1',
+			label: 'Label Name',
+			year: '2024',
+			spotifyTrackId: 'TRACK_ID_HERE',
+		},
+		{
+			title: 'Track Title 2',
+			label: 'Label Name',
+			year: '2024',
+			spotifyTrackId: 'TRACK_ID_HERE',
+		},
+		{
+			title: 'Track Title 3',
+			label: 'Label Name',
+			year: '2023',
+			spotifyTrackId: 'TRACK_ID_HERE',
+		},
+		{
+			title: 'Track Title 4',
+			label: 'Label Name',
+			year: '2023',
+			spotifyTrackId: 'TRACK_ID_HERE',
+		},
+	],
+
+	spotifyArtistId: '5P8Fsdky4FmNMPc7ZZN8ET',
+
 	social: {
 		instagram: 'https://instagram.com/mecie__/',
 		soundcloud: 'https://soundcloud.com/mecie_91',
 		youtube: 'https://youtube.com/@Mecie_Music',
-		spotify: 'https://open.spotify.com/artist/mecie',
+		spotify: 'https://open.spotify.com/artist/5P8Fsdky4FmNMPc7ZZN8ET',
 	},
 };

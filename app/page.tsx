@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import SoundCloudPlayer from '@/components/SoundCloudPlayer';
+import Releases from '@/components/Releases';
+import SpotifyPlayer from '@/components/SpotifyPlayer';
 import Gallery from '@/components/Gallery';
 import RecordLabels from '@/components/RecordLabels';
 import Venues from '@/components/Venues';
@@ -14,7 +15,8 @@ export default function Home() {
     <main className="min-h-screen bg-[var(--background)]">
       <Hero />
       <About />
-      <SoundCloudPlayer />
+      <Releases />
+      <SpotifyPlayer />
       <Gallery />
       <RecordLabels />
       <Venues />
