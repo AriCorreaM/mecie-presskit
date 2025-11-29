@@ -65,11 +65,19 @@ export const artist = {
 		{ src: '/images/gallery/photo-6.jpg', alt: 'Mecie live' },
 	],
 
-	techRider: [
-		'1x Mixer: Xone 96/92 – DJM V10/900 NXS/750 MK2',
-		'2x CDJ 3000/2000 NXS/2000 – XDJ 1000 MK2/1000',
-		'2x Monitores estéreo de alta calidad + Subwoofer',
-	],
+	techRider: {
+		equipment: [
+			'1x Mixer: Xone 96/92 – DJM V10/900 NXS/750 MK2',
+			'2x CDJ 3000/2000 NXS/2000 – XDJ 1000 MK2/1000',
+			'1x Tornamesa: Pioneer PLX 1000 – Technics 1200',
+			'2x Monitores estéreo de alta calidad + Subwoofer',
+		],
+		images: [
+			{ src: '/images/technical-rider/djm-900.png', alt: 'DJM 900 NXS2 Mixer' },
+			{ src: '/images/technical-rider/cdj-2000.png', alt: 'CDJ 2000 NXS2' },
+			{ src: '/images/technical-rider/plx-1000.png', alt: 'Pioneer PLX 1000' },
+		],
+	},
 
 	releases: [
 		{
@@ -105,6 +113,8 @@ export const artist = {
 		soundcloud: 'https://soundcloud.com/mecie_91',
 		youtube: 'https://youtube.com/@Mecie_Music',
 		spotify: 'https://open.spotify.com/artist/5P8Fsdky4FmNMPc7ZZN8ET',
-		bandcamp: 'https://mecie91.bandcamp.com/',
+		bandcamp: 'https://mecie.bandcamp.com/music',
+		beatport: 'https://www.beatport.com/es/artist/mecie',
+		applemusic: 'https://music.apple.com/us/artist/mecie/1491810136?l=es-MX',
 	},
 };
