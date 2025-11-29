@@ -72,11 +72,6 @@ export default function Gallery() {
                 loading="lazy"
               />
               <div className="photo-overlay" />
-              <div className="absolute inset-0 flex items-end p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <span className="text-sm font-medium text-white">
-                  {photo.alt}
-                </span>
-              </div>
             </motion.div>
           ))}
         </div>
