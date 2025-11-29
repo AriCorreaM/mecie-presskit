@@ -60,10 +60,16 @@ export const artist = {
 
 	gallery: [
 		{ src: '/images/gallery/photo-1.jpeg', alt: 'Mecie en vivo' },
-		{ src: '/images/gallery/ABEC0067-402D-41F3-A2E3-F7787E7CA14C.jpg', alt: 'Mecie portrait' },
+		{
+			src: '/images/gallery/ABEC0067-402D-41F3-A2E3-F7787E7CA14C.jpg',
+			alt: 'Mecie portrait',
+		},
 		{ src: '/images/gallery/DSC05624.JPEG', alt: 'Mecie DJ set' },
 		{ src: '/images/gallery/DSC05670.JPEG', alt: 'Mecie en club' },
-		{ src: '/images/gallery/JV6A9725-Mejorado-NR.jpg', alt: 'Mecie performance' },
+		{
+			src: '/images/gallery/JV6A9725-Mejorado-NR.jpg',
+			alt: 'Mecie performance',
+		},
 		{ src: '/images/gallery/JV6A9733-Mejorado-NR.jpg', alt: 'Mecie en cabina' },
 		{ src: '/images/gallery/JV6A9741-Mejorado-NR.jpg', alt: 'Mecie live' },
 	],
@@ -76,7 +82,6 @@ export const artist = {
 			'2x Monitores estéreo de alta calidad + Subwoofer',
 		],
 		images: [
-			{ src: '/images/technical-rider/djm-900.png', alt: 'DJM 900 NXS2 Mixer' },
 			{ src: '/images/technical-rider/cdj-2000.png', alt: 'CDJ 2000 NXS2' },
 			{ src: '/images/technical-rider/plx-1000.png', alt: 'Pioneer PLX 1000' },
 		],
