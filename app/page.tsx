@@ -1,7 +1,7 @@
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Releases from '@/components/Releases';
-import SpotifyPlayer from '@/components/SpotifyPlayer';
+import SoundCloudPlayer from '@/components/SoundCloudPlayer';
 import Gallery from '@/components/Gallery';
 import RecordLabels from '@/components/RecordLabels';
 import Venues from '@/components/Venues';
@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <About />
       <Releases />
-      <SpotifyPlayer />
+      <SoundCloudPlayer />
       <Gallery />
       <RecordLabels />
       <Venues />

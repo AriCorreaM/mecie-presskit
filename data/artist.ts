@@ -73,28 +73,28 @@ export const artist = {
 
 	releases: [
 		{
-			title: 'Track Title 1',
-			label: 'Label Name',
-			year: '2024',
-			spotifyTrackId: 'TRACK_ID_HERE',
+			title: 'Deep Inside',
+			spotifyTrackId: '3YAfHK1K8ytQuDg9jucY8E',
 		},
 		{
-			title: 'Track Title 2',
-			label: 'Label Name',
-			year: '2024',
-			spotifyTrackId: 'TRACK_ID_HERE',
+			title: 'Little Helper 423-1',
+			spotifyTrackId: '1c8Rc6vighL3CIPzvojwDa',
 		},
 		{
-			title: 'Track Title 3',
-			label: 'Label Name',
-			year: '2023',
-			spotifyTrackId: 'TRACK_ID_HERE',
+			title: 'Little Helper 423-2',
+			spotifyTrackId: '4WWuKPviSAX2PDotRhqwu7',
 		},
 		{
-			title: 'Track Title 4',
-			label: 'Label Name',
-			year: '2023',
-			spotifyTrackId: 'TRACK_ID_HERE',
+			title: 'Fire (Koto Barrueto Remix)',
+			spotifyTrackId: '24R50zzx7Avof3MTtGJxWC',
+		},
+		{
+			title: 'What We You Do',
+			spotifyTrackId: '6UbZSsNr3eR8wuThSC0A4V',
+		},
+		{
+			title: 'Eterio - Original Mix',
+			spotifyTrackId: '3YOcueJoSbF7VY6c3mH3NC',
 		},
 	],
 
