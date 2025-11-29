@@ -66,7 +66,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer text-[var(--text-secondary)] transition-colors hover:text-[var(--accent-purple)]"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer text-[var(--text-secondary)] transition-colors hover:text-[var(--accent-purple)]"
           aria-label="Scroll down"
         >
           <motion.div

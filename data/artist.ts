@@ -60,12 +60,10 @@ export const artist = {
 
 	gallery: [
 		{ src: '/images/gallery/photo-1.jpeg', alt: 'Mecie en vivo' },
+		{ src: '/images/gallery/ABEC0067-402D-41F3-A2E3-F7787E7CA14C.jpg', alt: 'Mecie portrait' },
 		{ src: '/images/gallery/DSC05624.JPEG', alt: 'Mecie DJ set' },
 		{ src: '/images/gallery/DSC05670.JPEG', alt: 'Mecie en club' },
-		{
-			src: '/images/gallery/JV6A9725-Mejorado-NR.jpg',
-			alt: 'Mecie performance',
-		},
+		{ src: '/images/gallery/JV6A9725-Mejorado-NR.jpg', alt: 'Mecie performance' },
 		{ src: '/images/gallery/JV6A9733-Mejorado-NR.jpg', alt: 'Mecie en cabina' },
 		{ src: '/images/gallery/JV6A9741-Mejorado-NR.jpg', alt: 'Mecie live' },
 	],
