@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Instagram, Music2, Music, Youtube } from 'lucide-react';
+import { Mail, Instagram, Music2, Music, Youtube, ShoppingBag, Disc, Headphones } from 'lucide-react';
 import { artist } from '@/data/artist';
 import SectionTitle from './SectionTitle';
 
@@ -33,6 +33,24 @@ export default function Contact() {
       icon: Music,
       color: 'hover:text-green-500',
     },
+    {
+      name: 'Beatport',
+      href: artist.social.beatport,
+      icon: ShoppingBag,
+      color: 'hover:text-cyan-400',
+    },
+    {
+      name: 'Bandcamp',
+      href: artist.social.bandcamp,
+      icon: Disc,
+      color: 'hover:text-blue-400',
+    },
+    {
+      name: 'Apple Music',
+      href: artist.social.applemusic,
+      icon: Headphones,
+      color: 'hover:text-rose-400',
+    },
   ];
 
   return (
@@ -54,7 +72,7 @@ export default function Contact() {
           </a>
 
           {/* Social links */}
-          <div className="flex justify-center gap-6 pt-4">
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
             {socialLinks.map((link) => (
               <motion.a
                 key={link.name}
@@ -65,6 +83,7 @@ export default function Contact() {
                 whileTap={{ scale: 0.95 }}
                 className={`rounded-full bg-[var(--background)] p-4 text-[var(--text-secondary)] transition-colors ${link.color}`}
                 aria-label={link.name}
+                title={link.name}
               >
                 <link.icon size={24} />
               </motion.a>
