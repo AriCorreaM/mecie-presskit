@@ -27,7 +27,7 @@ export default function Venues() {
               viewport={{ once: true }}
               className="chip flex items-center gap-2"
             >
-              <MapPin size={14} className="text-[var(--accent-purple)]" />
+              <MapPin size={14} className="text-[var(--text-secondary)]" />
               {venue}
             </motion.div>
           ))}

@@ -15,8 +15,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--background)] via-[var(--background-secondary)] to-[var(--background)]" />
 
       {/* Animated gradient orbs */}
-      <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-[var(--accent-purple)] opacity-20 blur-[128px]" />
-      <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-[var(--accent-cyan)] opacity-20 blur-[128px]" />
+      <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-[var(--accent)] opacity-10 blur-[128px]" />
+      <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-[var(--text-secondary)] opacity-10 blur-[128px]" />
 
       {/* Hero image background (if available) */}
       <div
@@ -55,28 +55,28 @@ export default function Hero() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="flex items-center justify-center gap-2 text-[var(--text-secondary)]"
           >
-            <MapPin size={18} className="text-[var(--accent-cyan)]" />
+            <MapPin size={18} className="text-[var(--text-secondary)]" />
             <span className="tracking-wide">{artist.location}</span>
           </motion.div>
         </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.button
-          onClick={scrollToAbout}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer text-[var(--text-secondary)] transition-colors hover:text-[var(--accent-purple)]"
-          aria-label="Scroll down"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-          >
-            <ChevronDown size={32} />
-          </motion.div>
-        </motion.button>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.button
+        onClick={scrollToAbout}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.6 }}
+        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 cursor-pointer text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+        aria-label="Scroll down"
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <ChevronDown size={32} />
+        </motion.div>
+      </motion.button>
     </section>
   );
 }

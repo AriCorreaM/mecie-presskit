@@ -67,7 +67,7 @@ export default function TechRider() {
                 className="gradient-border flex items-start gap-4 p-4"
               >
                 <div className="rounded-lg bg-[var(--background-secondary)] p-3">
-                  <Icon size={24} className="text-[var(--accent-purple)]" />
+                  <Icon size={24} className="text-[var(--text-secondary)]" />
                 </div>
                 <p className="flex-1 pt-2 text-[var(--text-secondary)]">{item}</p>
               </motion.div>

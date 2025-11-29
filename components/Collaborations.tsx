@@ -30,7 +30,7 @@ export default function Collaborations() {
               viewport={{ once: true }}
               className="chip flex items-center gap-2"
             >
-              <Users size={14} className="text-[var(--accent-cyan)]" />
+              <Users size={14} className="text-[var(--text-secondary)]" />
               {collab}
             </motion.div>
           ))}

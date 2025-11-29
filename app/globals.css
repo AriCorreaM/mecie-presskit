@@ -1,25 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0f;
-  --background-secondary: #1a1a2e;
-  --accent-purple: #9333ea;
-  --accent-pink: #ec4899;
-  --accent-cyan: #06b6d4;
-  --gradient-start: #06b6d4;
-  --gradient-end: #9333ea;
-  --text-primary: #ffffff;
-  --text-secondary: #94a3b8;
+  --background: #09090b;
+  --background-secondary: #18181b;
+  --surface: #27272a;
+  --border: #3f3f46;
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --accent: #71717a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-background-secondary: var(--background-secondary);
-  --color-accent-purple: var(--accent-purple);
-  --color-accent-pink: var(--accent-pink);
-  --color-accent-cyan: var(--accent-cyan);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -49,17 +47,17 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-purple);
+  background: var(--accent);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-pink);
+  background: var(--text-secondary);
 }
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(135deg, var(--text-secondary), var(--text-primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -70,26 +68,12 @@ body {
   position: relative;
   background: var(--background);
   border-radius: 12px;
-}
-
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 1px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
+  border: 1px solid var(--border);
 }
 
 /* Glow effect */
 .glow {
-  box-shadow: 0 0 40px rgba(147, 51, 234, 0.3);
+  box-shadow: 0 0 40px rgba(113, 113, 122, 0.2);
 }
 
 /* Section styles */
@@ -113,9 +97,9 @@ body {
 /* Neon glow text effect */
 .neon-text {
   text-shadow:
-    0 0 10px var(--accent-purple),
-    0 0 20px var(--accent-purple),
-    0 0 40px var(--accent-purple);
+    0 0 10px var(--accent),
+    0 0 20px var(--accent),
+    0 0 40px var(--accent);
 }
 
 /* Photo hover overlay */
@@ -124,8 +108,8 @@ body {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(10, 10, 15, 0.9) 0%,
-    rgba(10, 10, 15, 0.3) 50%,
+    rgba(9, 9, 11, 0.9) 0%,
+    rgba(9, 9, 11, 0.3) 50%,
     transparent 100%
   );
   opacity: 0;
@@ -141,11 +125,12 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: var(--background-secondary);
+  background: var(--surface);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  border: 1px solid var(--border);
 }
 
 @media (min-width: 768px) {
@@ -157,13 +142,13 @@ body {
 
 .label-circle:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(147, 51, 234, 0.4);
+  box-shadow: 0 0 20px rgba(113, 113, 122, 0.3);
 }
 
 /* Button styles */
 .btn-primary {
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-  color: white;
+  background: var(--text-primary);
+  color: var(--background);
   padding: 0.875rem 2rem;
   border-radius: 9999px;
   font-weight: 600;
@@ -175,12 +160,13 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(147, 51, 234, 0.4);
+  box-shadow: 0 10px 30px rgba(250, 250, 250, 0.1);
+  background: var(--text-secondary);
 }
 
 .btn-secondary {
   background: transparent;
-  color: white;
+  color: var(--text-primary);
   padding: 0.875rem 2rem;
   border-radius: 9999px;
   font-weight: 600;
@@ -188,19 +174,19 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-  border-color: var(--accent-purple);
-  background: rgba(147, 51, 234, 0.1);
+  border-color: var(--text-secondary);
+  background: var(--surface);
 }
 
 /* Genre tag */
 .genre-tag {
-  background: rgba(147, 51, 234, 0.2);
-  border: 1px solid var(--accent-purple);
-  color: var(--accent-cyan);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
   padding: 0.375rem 1rem;
   border-radius: 9999px;
   font-size: 0.875rem;
@@ -209,24 +195,26 @@ body {
 
 /* Venue/collab chip */
 .chip {
-  background: var(--background-secondary);
+  background: var(--surface);
   color: var(--text-secondary);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   font-size: 0.875rem;
   transition: all 0.3s ease;
+  border: 1px solid var(--border);
 }
 
 .chip:hover {
-  background: rgba(147, 51, 234, 0.2);
+  background: var(--background-secondary);
   color: var(--text-primary);
+  border-color: var(--accent);
 }
 
 /* Lightbox */
 .lightbox-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(9, 9, 11, 0.95);
   z-index: 100;
   display: flex;
   align-items: center;
