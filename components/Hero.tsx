@@ -11,21 +11,14 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--background)] via-[var(--background-secondary)] to-[var(--background)]" />
-
-      {/* Animated gradient orbs */}
-      <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-[var(--accent)] opacity-10 blur-[128px]" />
-      <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-[var(--text-secondary)] opacity-10 blur-[128px]" />
-
-      {/* Hero image background (if available) */}
+      {/* Hero image background */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-30"
-        style={{ backgroundImage: 'url(/images/gallery/JV6A9733-Mejorado-NR.jpg)' }}
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url(/images/about/hero1.png)' }}
       />
 
-      {/* Gradient overlay on top of image */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-transparent to-[var(--background)]" />
+      {/* Gradient overlay on top of image - only at edges */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-transparent to-transparent" />
 
       <div className="relative z-10 px-6 text-center">
         <motion.div
