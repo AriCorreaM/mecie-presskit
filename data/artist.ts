@@ -17,6 +17,8 @@ export const artist = {
 	venues: [
 		'La Feria',
 		'Club Room',
+		'Santo Remedio',
+		'Trnsts',
 		'Club Ambar',
 		'Miniroom',
 		'Candelaria',
@@ -57,12 +59,15 @@ export const artist = {
 	],
 
 	gallery: [
-		{ src: '/images/gallery/photo-1.jpg', alt: 'Mecie en vivo' },
-		{ src: '/images/gallery/photo-2.jpg', alt: 'Mecie DJ set' },
-		{ src: '/images/gallery/photo-3.jpg', alt: 'Mecie en club' },
-		{ src: '/images/gallery/photo-4.jpg', alt: 'Mecie performance' },
-		{ src: '/images/gallery/photo-5.jpg', alt: 'Mecie en cabina' },
-		{ src: '/images/gallery/photo-6.jpg', alt: 'Mecie live' },
+		{ src: '/images/gallery/photo-1.jpeg', alt: 'Mecie en vivo' },
+		{ src: '/images/gallery/DSC05624.JPEG', alt: 'Mecie DJ set' },
+		{ src: '/images/gallery/DSC05670.JPEG', alt: 'Mecie en club' },
+		{
+			src: '/images/gallery/JV6A9725-Mejorado-NR.jpg',
+			alt: 'Mecie performance',
+		},
+		{ src: '/images/gallery/JV6A9733-Mejorado-NR.jpg', alt: 'Mecie en cabina' },
+		{ src: '/images/gallery/JV6A9741-Mejorado-NR.jpg', alt: 'Mecie live' },
 	],
 
 	techRider: {

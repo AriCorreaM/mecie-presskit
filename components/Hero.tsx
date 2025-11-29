@@ -21,7 +21,7 @@ export default function Hero() {
       {/* Hero image background (if available) */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-30"
-        style={{ backgroundImage: 'url(/images/hero.jpg)' }}
+        style={{ backgroundImage: 'url(/images/gallery/JV6A9733-Mejorado-NR.jpg)' }}
       />
 
       {/* Gradient overlay on top of image */}

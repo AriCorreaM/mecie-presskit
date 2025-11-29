@@ -22,7 +22,7 @@ export default function About() {
           >
             <div className="gradient-border absolute inset-0 z-10" />
             <Image
-              src="/images/about.jpg"
+              src="/images/about/about.jpeg"
               alt={`${artist.name} - ${artist.role}`}
               fill
               className="object-cover"
