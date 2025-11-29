@@ -25,9 +25,8 @@ export default function RecordLabels() {
                 <Image
                   src={label.logo}
                   alt={label.name}
-                  width={80}
-                  height={80}
-                  className="object-contain"
+                  fill
+                  className="object-cover rounded-full"
                 />
               </div>
               <span className="text-center text-sm text-[var(--text-secondary)]">

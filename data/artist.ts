@@ -46,14 +46,14 @@ export const artist = {
 	],
 
 	labels: [
-		{ name: 'Manoslabel', logo: '/images/labels/street-habitat.png' },
-		{ name: 'Little Helpers', logo: '/images/labels/street-habitat.png' },
+		{ name: 'Manoslabel', logo: '/images/labels/manos-label.jpeg' },
+		{ name: 'Little Helpers', logo: '/images/labels/little-helpers.png' },
 		{ name: 'Street Habitat', logo: '/images/labels/street-habitat.png' },
 		{ name: 'Calle Latina Records', logo: '/images/labels/calle-latina.png' },
-		{ name: 'Código 56 Records', logo: '/images/labels/codigo56.png' },
-		{ name: 'Motion Bass', logo: '/images/labels/motion-bass.png' },
-		{ name: 'Whizal Records', logo: '/images/labels/whizal.png' },
-		{ name: 'Coquimbo Music', logo: '/images/labels/coquimbo.png' },
+		{ name: 'Código 56 Records', logo: '/images/labels/codigo-56.jpeg' },
+		{ name: 'Motion Bass', logo: '/images/labels/motion-bass.jpeg' },
+		{ name: 'Whizal Records', logo: '/images/labels/wizal.jpeg' },
+		{ name: 'Coquimbo Music', logo: '/images/labels/coquimbo-records.jpeg' },
 	],
 
 	gallery: [
@@ -105,5 +105,6 @@ export const artist = {
 		soundcloud: 'https://soundcloud.com/mecie_91',
 		youtube: 'https://youtube.com/@Mecie_Music',
 		spotify: 'https://open.spotify.com/artist/5P8Fsdky4FmNMPc7ZZN8ET',
+		bandcamp: 'https://mecie91.bandcamp.com/',
 	},
 };
