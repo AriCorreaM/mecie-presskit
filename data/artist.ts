@@ -23,6 +23,7 @@ export const artist = {
 		'Miniroom',
 		'Candelaria',
 		'Club Amanda',
+		'Club Subterráneo',
 		'Teatro Alicia',
 		'Onacciu',
 	],
