@@ -14,6 +14,18 @@ export default function Footer() {
         <p className="mt-2 text-xs text-[var(--text-secondary)]/60">
           {artist.role} &bull; {artist.location}
         </p>
+        <p className="mt-4 text-xs text-[var(--text-secondary)]/50">
+          Crafted by{' '}
+          <a
+            href="https://bkstgstudio.cl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[var(--text-secondary)] transition-colors"
+          >
+            BKSTG Studio
+          </a>{' '}
+          🇨🇱
+        </p>
       </div>
     </footer>
   );
