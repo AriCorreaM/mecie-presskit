@@ -1,96 +1,104 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Instagram, Music2, Music, Youtube, ShoppingBag, Disc, Headphones } from 'lucide-react';
 import { artist } from '@/data/artist';
-import SectionTitle from './SectionTitle';
 
 export default function Contact() {
-  const mailtoLink = `mailto:${artist.email}`;
+	const mailtoLink = `mailto:${artist.email}`;
 
-  const socialLinks = [
-    {
-      name: 'Instagram',
-      href: artist.social.instagram,
-      icon: Instagram,
-      color: 'hover:text-pink-500',
-    },
-    {
-      name: 'SoundCloud',
-      href: artist.social.soundcloud,
-      icon: Music2,
-      color: 'hover:text-orange-500',
-    },
-    {
-      name: 'YouTube',
-      href: artist.social.youtube,
-      icon: Youtube,
-      color: 'hover:text-red-500',
-    },
-    {
-      name: 'Spotify',
-      href: artist.social.spotify,
-      icon: Music,
-      color: 'hover:text-green-500',
-    },
-    {
-      name: 'Beatport',
-      href: artist.social.beatport,
-      icon: ShoppingBag,
-      color: 'hover:text-cyan-400',
-    },
-    {
-      name: 'Bandcamp',
-      href: artist.social.bandcamp,
-      icon: Disc,
-      color: 'hover:text-blue-400',
-    },
-    {
-      name: 'Apple Music',
-      href: artist.social.applemusic,
-      icon: Headphones,
-      color: 'hover:text-rose-400',
-    },
-  ];
+	const socialLinks = [
+		{ name: 'Instagram', href: artist.social.instagram },
+		{ name: 'SoundCloud', href: artist.social.soundcloud },
+		{ name: 'Spotify', href: artist.social.spotify },
+		{ name: 'YouTube', href: artist.social.youtube },
+		{ name: 'Beatport', href: artist.social.beatport },
+		{ name: 'Bandcamp', href: artist.social.bandcamp },
+	];
 
-  return (
-    <section id="booking" className="section bg-[var(--background-secondary)]">
-      <div className="mx-auto max-w-2xl text-center">
-        <SectionTitle title="Booking" />
+	return (
+		<section
+			id="booking"
+			className="relative border-t border-white/10 bg-background overflow-hidden"
+		>
+			<div className="grid grid-cols-1 lg:grid-cols-12 w-full">
+				{/* Lado Izquierdo: El CTA de Booking Masivo */}
+				<div className="lg:col-span-7 p-8 md:p-16 flex flex-col justify-between min-h-[500px] border-b lg:border-b-0 lg:border-r border-white/10">
+					<div>
+						<span className="font-mono text-[10px] tracking-[0.5em] text-accent uppercase block mb-8">
+							Booking Protocol / Inquiry
+						</span>
+						<motion.h2
+							initial={{ y: 30, opacity: 0 }}
+							whileInView={{ y: 0, opacity: 1 }}
+							className="text-6xl md:text-9xl font-black tracking-tighter uppercase italic leading-[0.8] mb-12"
+						>
+							LET'S
+							<br />
+							TALK<span className="not-italic text-accent">.</span>
+						</motion.h2>
+					</div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="space-y-8"
-        >
-          {/* Main CTA button */}
-          <a href={mailtoLink} className="btn-primary inline-flex text-lg">
-            <Mail size={20} />
-            {artist.email}
-          </a>
+					<motion.div
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						transition={{ delay: 0.3 }}
+					>
+						<p className="text-sm font-mono text-text-secondary uppercase tracking-[0.2em] mb-4">
+							Direct Mailbox:
+						</p>
+						<a
+							href={mailtoLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-lg sm:text-2xl md:text-5xl font-light tracking-tighter hover:italic hover:text-accent transition-all duration-300 break-all"
+						>
+							{artist.email.toUpperCase()}
+						</a>
+					</motion.div>
+				</div>
 
-          {/* Social links */}
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
-            {socialLinks.map((link) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className={`rounded-full bg-[var(--background)] p-4 text-[var(--text-secondary)] transition-colors ${link.color}`}
-                aria-label={link.name}
-                title={link.name}
-              >
-                <link.icon size={24} />
-              </motion.a>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
+				{/* Lado Derecho: Redes Sociales Estilo "Créditos" */}
+				<div className="lg:col-span-5 flex flex-col">
+					<div className="p-8 md:p-16 border-b border-white/10">
+						<h3 className="text-xs font-mono uppercase tracking-[0.4em] text-accent mb-12">
+							Digital Network
+						</h3>
+						<div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-12">
+							{socialLinks.map((link, index) => (
+								<motion.a
+									key={link.name}
+									href={link.href}
+									target="_blank"
+									rel="noopener noreferrer"
+									initial={{ opacity: 0, x: 10 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									transition={{ delay: index * 0.05 }}
+									className="group flex items-center justify-between border-b border-white/5 pb-2"
+								>
+									<span className="text-lg font-bold uppercase tracking-tighter group-hover:translate-x-2 transition-transform">
+										{link.name}
+									</span>
+									<span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+										↗
+									</span>
+								</motion.a>
+							))}
+						</div>
+					</div>
+
+					{/* Bloque de Cierre con Inversión de Color (Ref: image_a0baca) */}
+					<div className="flex-1 bg-white text-black p-8 md:p-16 flex flex-col justify-center gap-4">
+						<p className="text-[10px] font-black uppercase tracking-[0.5em]">
+							{artist.location}
+						</p>
+						<p className="text-2xl md:text-4xl font-black tracking-tighter uppercase italic leading-none">
+							{artist.name.toUpperCase()} ARCHIVE
+							<br />
+							VERSION {artist.pressKitYear}
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 }

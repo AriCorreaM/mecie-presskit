@@ -1,0 +1,23 @@
+{
+	"name": "Mecie - DJ & Producer",
+	"short_name": "Mecie",
+	"description": "Press Kit oficial de Mecie, DJ y productor de música electrónica de Santiago, Chile.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#050505",
+	"theme_color": "#050505",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "/icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml"
+		},
+		{
+			"src": "/favicon.ico",
+			"sizes": "48x48",
+			"type": "image/x-icon"
+		}
+	],
+	"categories": ["music", "entertainment"]
+}

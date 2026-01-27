@@ -3,8 +3,70 @@ export const artist = {
 	realName: 'Jorge González',
 	role: 'DJ / Producer',
 	location: 'Santiago, Chile',
+	cityCode: 'SCL',
+	region: 'South America',
+	country: 'Chile',
 	email: 'Jorgegmusic91@gmail.com',
 	soundcloudUrl: 'https://soundcloud.com/mecie_91',
+
+	// Dates
+	establishedYear: 2024,
+	pressKitYear: 2026,
+	pressKitVersion: 'MC_PK_V1',
+
+	// SEO
+	seo: {
+		siteUrl: 'https://meciemusic.cl',
+		title: 'Mecie | DJ & Producer - Techno, Minimal, Deep House',
+		description:
+			'Press Kit oficial de Mecie, DJ y productor de música electrónica de Santiago, Chile. Especializado en Techno, Minimal y Deep House. Booking, releases y más.',
+		keywords: [
+			'Mecie',
+			'DJ',
+			'Producer',
+			'Techno',
+			'Minimal',
+			'Deep House',
+			'Santiago',
+			'Chile',
+			'Electronic Music',
+			'Press Kit',
+			'Booking',
+		],
+		ogImage: '/images/og-image.jpg',
+		twitterHandle: '@mecie_music',
+	},
+
+	// Images
+	images: {
+		hero: '/images/about/hero1.png',
+		about: '/images/about/about.jpeg',
+		ogImage: '/images/og-image.jpg',
+	},
+
+	// Taglines & descriptions
+	tagline: 'Explorando paisajes sonoros minimalistas.',
+	formats: ['Digital', 'Vinyl'],
+	touringStatus: 'Active Touring',
+	collaborationsDescription:
+		'Artistas con los que Mecie ha compartido cabina y estudio.',
+
+	// Tech rider
+	techRiderVersion: '1.2',
+
+	// Credits
+	credits: {
+		studio: 'BKSTG Studio',
+		studioUrl: 'https://bkstgstudio.cl',
+	},
+
+	// Navigation
+	navigation: [
+		{ label: '01 Identity', href: '#about' },
+		{ label: '02 Sound Archive', href: '#releases' },
+		{ label: '03 Visuals', href: '#gallery' },
+		{ label: '04 Contact', href: '#booking' },
+	],
 
 	biography: [
 		'Jorge González, conocido como "Mecie" en la música electrónica, es un talentoso DJ y productor chileno que está dejando huella en la escena local. Su pasión por la música electrónica comenzó temprano, y a finales de 2018 inicia su camino por los estilos clásicos del techno, minimal y house.',
