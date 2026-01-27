@@ -15,10 +15,10 @@ export default function About() {
             whileInView={{ y: 0, opacity: 1 }}
             className="text-6xl md:text-9xl font-black tracking-tighter text-black italic leading-[0.8]"
           >
-            BIO<span className="not-italic text-4xl md:text-7xl">.</span>
+            {artist.sections.about.title}<span className="not-italic text-4xl md:text-7xl">.</span>
           </motion.h2>
           <p className="text-[10px] font-bold uppercase tracking-[0.5em] text-black">
-            {artist.name} — Selected Biography
+            {artist.name} — {artist.sections.about.subtitle}
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function About() {
         <div className="md:col-span-5 p-8 md:p-16 flex flex-col justify-end gap-12">
           {/* Genre Tags Estilo Minimalista */}
           <div className="space-y-4">
-            <span className="text-[10px] uppercase tracking-[0.6em] text-text-secondary">Sound Signature</span>
+            <span className="text-[10px] uppercase tracking-[0.6em] text-text-secondary">{artist.sections.about.genresLabel}</span>
             <div className="flex flex-wrap gap-2">
               {artist.genres.map((genre) => (
                 <span key={genre} className="border border-white/20 px-4 py-1 text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition-colors cursor-default">
@@ -75,9 +75,9 @@ export default function About() {
           {/* Dato Técnico / Ubicación */}
           <div className="border-t border-white/10 pt-8">
             <p className="font-mono text-[10px] text-text-secondary leading-loose">
-              ORIGIN: {artist.location.toUpperCase()}<br />
-              EST: {artist.establishedYear}<br />
-              FORMAT: {artist.formats.join(' / ').toUpperCase()}
+              {artist.sections.about.labels.origin}: {artist.location.toUpperCase()}<br />
+              {artist.sections.about.labels.established}: {artist.establishedYear}<br />
+              {artist.sections.about.labels.format}: {artist.formats.join(' / ').toUpperCase()}
             </p>
           </div>
         </div>

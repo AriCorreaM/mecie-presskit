@@ -15,10 +15,10 @@ export default function Releases() {
 				<header className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
 					<div className="max-w-xl">
 						<span className="text-[10px] font-mono tracking-[0.5em] text-accent uppercase block mb-4">
-							Digital / Sonic Catalog
+							{artist.sections.releases.subtitle}
 						</span>
 						<h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase italic leading-none">
-							RELEASES<span className="not-italic text-accent">.</span>
+							{artist.sections.releases.title}<span className="not-italic text-accent">.</span>
 						</h2>
 					</div>
 				</header>
@@ -31,7 +31,7 @@ export default function Releases() {
 						>
 							<div className="z-10">
 								<span className="font-mono text-[10px] mb-2 block opacity-50 text-accent">
-									REF. MC-00{index + 1}
+									{artist.sections.releases.refPrefix}00{index + 1}
 								</span>
 								<h3 className="text-2xl font-bold tracking-tighter uppercase leading-tight mb-4">
 									{release.title}
@@ -61,20 +61,18 @@ export default function Releases() {
 					>
 						<div>
 							<span className="font-mono text-[10px] mb-2 block uppercase tracking-widest">
-								Protocol / External Link
+								{artist.sections.releases.spotifyCard.label}
 							</span>
 							<h3 className="text-4xl font-black tracking-tighter uppercase italic leading-[0.8]">
-								FULL
-								<br />
-								DISCO
-								<br />
-								GRAPHY
+								{artist.sections.releases.spotifyCard.title.split(' ').map((word, i) => (
+									<span key={i}>{word}<br /></span>
+								))}
 							</h3>
 						</div>
 
 						<div className="flex justify-between items-end">
 							<span className="text-[10px] font-bold uppercase tracking-widest">
-								Listen on Spotify
+								{artist.sections.releases.spotifyCard.cta}
 							</span>
 							<span className="text-4xl">↗</span>
 						</div>

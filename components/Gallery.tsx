@@ -62,10 +62,10 @@ export default function Gallery() {
 				{/* Título de sección asimétrico */}
 				<div className="mb-16 flex flex-col md:flex-row items-baseline justify-between border-b border-white/10 pb-8">
 					<h2 className="text-6xl md:text-9xl font-black tracking-tighter uppercase italic">
-						Visual<span className="not-italic text-4xl md:text-7xl">.</span>
+						{artist.sections.gallery.title}<span className="not-italic text-4xl md:text-7xl">.</span>
 					</h2>
 					<span className="font-mono text-[10px] tracking-[0.5em] text-text-secondary uppercase">
-						Press / Documentation / Archive
+						{artist.sections.gallery.subtitle}
 					</span>
 				</div>
 
@@ -100,7 +100,7 @@ export default function Gallery() {
 							/>
 							{/* Overlay de número de archivo */}
 							<div className="absolute bottom-4 left-4 font-mono text-[10px] text-white opacity-0 group-hover:opacity-100 transition-opacity">
-								IMG_00{index + 1}
+								{artist.sections.gallery.imagePrefix}00{index + 1}
 							</div>
 						</motion.div>
 					))}
@@ -171,7 +171,7 @@ export default function Gallery() {
 						{/* Texto de metadata en el pie del lightbox */}
 						<div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 max-w-xs">
 							<p className="text-[10px] uppercase tracking-[0.4em] text-text-secondary">
-								{artist.gallery[selectedIndex].alt || 'Press Photo'}
+								{artist.gallery[selectedIndex].alt || artist.sections.gallery.fallbackAlt}
 							</p>
 						</div>
 					</motion.div>

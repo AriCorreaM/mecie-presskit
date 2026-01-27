@@ -13,13 +13,13 @@ export default function RecordLabels() {
 			<div className="mx-auto max-w-6xl px-6 relative z-10">
 				<header className="mb-16 flex items-baseline justify-between border-b border-white/10 pb-6">
 					<h2 className="text-6xl md:text-8xl font-black tracking-tighter uppercase italic">
-						LABELS
+						{artist.sections.labels.title}
 						<span className="text-outline text-4xl md:text-6xl not-italic ml-2">
 							.
 						</span>
 					</h2>
 					<span className="font-mono text-[10px] tracking-[0.5em] text-text-secondary uppercase">
-						Affiliations / Partners
+						{artist.sections.labels.subtitle}
 					</span>
 				</header>
 
@@ -36,7 +36,7 @@ export default function RecordLabels() {
 							{/* Decoración: ID de catálogo */}
 							<div className="flex justify-between items-start transition-colors group-hover:text-black">
 								<span className="font-mono text-[10px] tracking-widest opacity-50 uppercase">
-									Label ID: 00{index + 1}
+									{artist.sections.labels.idPrefix} 00{index + 1}
 								</span>
 								<div className="w-2 h-2 rounded-full border border-current opacity-30 group-hover:animate-ping" />
 							</div>
@@ -56,7 +56,7 @@ export default function RecordLabels() {
 										{label.name}
 									</h3>
 									<p className="text-[9px] font-mono tracking-[0.3em] text-text-secondary group-hover:text-black/60 uppercase">
-										Official Imprint
+										{artist.sections.labels.imprint}
 									</p>
 								</div>
 							</div>
@@ -69,8 +69,8 @@ export default function RecordLabels() {
 
 				{/* Cierre estético estilo pie de página de catálogo */}
 				<div className="mt-12 flex flex-col md:flex-row justify-between text-[9px] font-mono text-text-secondary uppercase tracking-[0.4em]">
-					<p>{artist.name} sonic signatures documented globally</p>
-					<p>© {artist.pressKitYear} Archive Series</p>
+					<p>{artist.name} {artist.sections.labels.footerText}</p>
+					<p>© {artist.pressKitYear} {artist.sections.labels.archiveText}</p>
 				</div>
 			</div>
 		</section>

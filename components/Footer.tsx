@@ -13,7 +13,7 @@ export default function Footer() {
 					{/* 01. Identidad */}
 					<div className="space-y-4">
 						<span className="font-mono text-[10px] uppercase tracking-[0.4em] opacity-40 block">
-							Identity
+							{artist.sections.footer.identityLabel}
 						</span>
 						<div className="space-y-1">
 							<h3 className="text-2xl font-black tracking-tighter uppercase italic">
@@ -28,7 +28,7 @@ export default function Footer() {
 					{/* 02. Navegación Silenciosa */}
 					<div className="space-y-4">
 						<span className="font-mono text-[10px] uppercase tracking-[0.4em] opacity-40 block">
-							Index
+							{artist.sections.footer.indexLabel}
 						</span>
 						<ul className="grid grid-cols-1 gap-2 text-[11px] font-bold uppercase tracking-tighter">
 							{artist.navigation.map((item) => (
@@ -47,11 +47,11 @@ export default function Footer() {
 					{/* 03. Studio / Credit */}
 					<div className="space-y-4">
 						<span className="font-mono text-[10px] uppercase tracking-[0.4em] opacity-40 block">
-							Production
+							{artist.sections.footer.productionLabel}
 						</span>
 						<div className="space-y-2">
 							<p className="text-[11px] font-bold uppercase tracking-widest opacity-60">
-								Crafted by
+								{artist.sections.footer.craftedBy}
 							</p>
 							<a
 								href={artist.credits.studioUrl}
@@ -67,10 +67,10 @@ export default function Footer() {
 					{/* 04. Legal / Time */}
 					<div className="space-y-4 lg:text-right">
 						<span className="font-mono text-[10px] uppercase tracking-[0.4em] opacity-40 block">
-							Protocol
+							{artist.sections.footer.protocolLabel}
 						</span>
 						<div className="space-y-1 text-[10px] font-mono leading-relaxed opacity-60 uppercase tracking-widest">
-							<p>All Rights Reserved</p>
+							<p>{artist.sections.footer.allRightsReserved}</p>
 							<p>{artist.cityCode} / {artist.establishedYear} — {currentYear}</p>
 							<p>Ref: {artist.pressKitVersion}</p>
 						</div>
@@ -84,7 +84,7 @@ export default function Footer() {
 						<div className="w-4 h-px bg-black" />
 					</div>
 					<span className="font-mono text-[8px] uppercase tracking-[0.8em]">
-						End of document
+						{artist.sections.footer.endOfDocument}
 					</span>
 				</div>
 			</div>

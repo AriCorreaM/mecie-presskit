@@ -34,16 +34,16 @@ export default function Collaborations() {
 				<div className="lg:col-span-7 bg-white text-black p-8 md:p-16 flex flex-col justify-between min-h-[400px] order-1 lg:order-2">
 					<div>
 						<span className="font-mono text-[10px] tracking-[0.5em] uppercase block mb-8 opacity-60">
-							Creative Network / Archive
+							{artist.sections.collaborations.subtitle}
 						</span>
 						<motion.h2
 							initial={{ y: 30, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
 							className="text-6xl md:text-9xl font-black tracking-tighter uppercase italic leading-[0.8]"
 						>
-							COLL
+							{artist.sections.collaborations.title.slice(0, 4)}
 							<br />
-							ABS<span className="not-italic">.</span>
+							{artist.sections.collaborations.title.slice(4)}<span className="not-italic">.</span>
 						</motion.h2>
 					</div>
 

@@ -16,10 +16,10 @@ export default function TechRider() {
 			<div className="mx-auto max-w-6xl px-6 relative z-10">
 				<header className="mb-20 border-l-4 border-white pl-8">
 					<span className="font-mono text-[10px] tracking-[0.5em] text-text-secondary uppercase block mb-2">
-						Technical Specification / Rider {artist.techRiderVersion}
+						{artist.sections.techRider.subtitle} {artist.techRiderVersion}
 					</span>
 					<h2 className="text-6xl md:text-8xl font-black tracking-tighter uppercase italic leading-none">
-						EQUIPMENT<span className="not-italic text-accent">.</span>
+						{artist.sections.techRider.title}<span className="not-italic text-accent">.</span>
 					</h2>
 				</header>
 
@@ -55,14 +55,14 @@ export default function TechRider() {
 							<div className="p-6 border-t border-white/10 flex justify-between items-center bg-background z-10">
 								<div className="flex flex-col">
 									<span className="font-mono text-[9px] uppercase tracking-[0.4em] text-accent mb-1">
-										Component 0{index + 1}
+										{artist.sections.techRider.componentPrefix} 0{index + 1}
 									</span>
 									<span className="text-lg font-bold uppercase tracking-tighter text-text-primary group-hover:text-white transition-colors">
 										{image.alt}
 									</span>
 								</div>
 								<span className="font-mono text-xs opacity-10 group-hover:opacity-100 transition-opacity italic">
-									SPEC_DOC_{index + 1}
+									{artist.sections.techRider.specPrefix}{index + 1}
 								</span>
 							</div>
 						</motion.div>
@@ -73,11 +73,10 @@ export default function TechRider() {
 				<div className="grid grid-cols-1 md:grid-cols-12 gap-12">
 					<div className="md:col-span-4">
 						<h3 className="text-xl font-bold uppercase tracking-tighter mb-4 italic">
-							Requirements
+							{artist.sections.techRider.requirementsTitle}
 						</h3>
 						<p className="text-xs text-text-secondary font-mono leading-relaxed uppercase tracking-wider">
-							Equipo obligatorio para performance. Consultar cambios con
-							antelación.
+							{artist.sections.techRider.requirementsDescription}
 						</p>
 					</div>
 
@@ -108,7 +107,7 @@ export default function TechRider() {
 
 						<div className="mt-12 p-6 border border-white/5 bg-white/[0.02] flex justify-between items-center">
 							<span className="text-[9px] font-mono text-text-secondary uppercase tracking-[0.4em]">
-								Tech Rider Verified by {artist.name} Studio
+								{artist.sections.techRider.verifiedBy} {artist.name} Studio
 							</span>
 							<div className="w-12 h-[1px] bg-accent" />
 						</div>

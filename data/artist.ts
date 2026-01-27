@@ -68,6 +68,87 @@ export const artist = {
 		{ label: '04 Contact', href: '#booking' },
 	],
 
+	// Section Content
+	sections: {
+		hero: {
+			subtitle: 'Official Press Kit',
+			nameParts: ['ME', 'CIE'],
+		},
+		about: {
+			title: 'BIO',
+			subtitle: 'Selected Biography',
+			genresLabel: 'Sound Signature',
+			labels: {
+				origin: 'ORIGIN',
+				established: 'EST',
+				format: 'FORMAT',
+			},
+		},
+		releases: {
+			title: 'RELEASES',
+			subtitle: 'Digital / Sonic Catalog',
+			refPrefix: 'REF. MC-',
+			spotifyCard: {
+				label: 'Protocol / External Link',
+				title: 'FULL DISCOGRAPHY',
+				cta: 'Listen on Spotify',
+			},
+		},
+		gallery: {
+			title: 'Visual',
+			subtitle: 'Press / Documentation / Archive',
+			imagePrefix: 'IMG_',
+			fallbackAlt: 'Press Photo',
+		},
+		venues: {
+			title: 'LOCATE',
+			subtitle: 'Tour Log / Location History',
+			labels: {
+				region: 'Region',
+				status: 'Status',
+			},
+		},
+		collaborations: {
+			title: 'COLLABS',
+			subtitle: 'Creative Network / Archive',
+		},
+		techRider: {
+			title: 'EQUIPMENT',
+			subtitle: 'Technical Specification / Rider',
+			componentPrefix: 'Component',
+			specPrefix: 'SPEC_DOC_',
+			requirementsTitle: 'Requirements',
+			requirementsDescription:
+				'Equipo obligatorio para performance. Consultar cambios con antelación.',
+			verifiedBy: 'Tech Rider Verified by',
+		},
+		labels: {
+			title: 'LABELS',
+			subtitle: 'Affiliations / Partners',
+			idPrefix: 'Label ID:',
+			imprint: 'Official Imprint',
+			footerText: 'sonic signatures documented globally',
+			archiveText: 'Archive Series',
+		},
+		contact: {
+			title: "LET'S TALK",
+			subtitle: 'Booking Protocol / Inquiry',
+			emailLabel: 'Direct Mailbox:',
+			socialTitle: 'Digital Network',
+			archiveTitle: 'ARCHIVE',
+			versionLabel: 'VERSION',
+		},
+		footer: {
+			identityLabel: 'Identity',
+			indexLabel: 'Index',
+			productionLabel: 'Production',
+			craftedBy: 'Crafted by',
+			protocolLabel: 'Protocol',
+			allRightsReserved: 'All Rights Reserved',
+			endOfDocument: 'End of document',
+		},
+	},
+
 	biography: [
 		'Jorge González, conocido como "Mecie" en la música electrónica, es un talentoso DJ y productor chileno que está dejando huella en la escena local. Su pasión por la música electrónica comenzó temprano, y a finales de 2018 inicia su camino por los estilos clásicos del techno, minimal y house.',
 		'Tras perfeccionar sus habilidades de producción musical de la mano de grandes productores nacionales como Pablo Balbontín, Francisco Allendes y Matías Spataro, sus producciones han destacado tanto en sellos nacionales como internacionales, ganando reconocimiento por un sonido vanguardista y único.',

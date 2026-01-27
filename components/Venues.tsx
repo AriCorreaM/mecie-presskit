@@ -14,22 +14,22 @@ export default function Venues() {
 				<div className="lg:col-span-7 p-8 md:p-16 border-b lg:border-b-0 lg:border-r border-white/10 flex flex-col justify-between min-h-[400px]">
 					<div>
 						<span className="font-mono text-[10px] tracking-[0.5em] text-accent uppercase block mb-8">
-							Tour Log / Location History
+							{artist.sections.venues.subtitle}
 						</span>
 						<motion.h2
 							initial={{ x: -30, opacity: 0 }}
 							whileInView={{ x: 0, opacity: 1 }}
 							className="text-6xl md:text-9xl font-black tracking-tighter uppercase italic leading-[0.8]"
 						>
-							LOC
+							{artist.sections.venues.title.slice(0, 3)}
 							<br />
-							ATE<span className="not-italic text-accent">.</span>
+							{artist.sections.venues.title.slice(3)}<span className="not-italic text-accent">.</span>
 						</motion.h2>
 					</div>
 
 					<div className="mt-12 flex flex-col sm:flex-row gap-2 sm:gap-8 font-mono text-[10px] text-text-secondary uppercase tracking-widest">
-						<p>Region: {artist.region}</p>
-						<p>Status: {artist.touringStatus}</p>
+						<p>{artist.sections.venues.labels.region}: {artist.region}</p>
+						<p>{artist.sections.venues.labels.status}: {artist.touringStatus}</p>
 					</div>
 				</div>
 

@@ -23,11 +23,11 @@ export default function Hero() {
 					className="max-w-2xl"
 				>
 					<span className="text-xs tracking-[0.6em] uppercase text-text-secondary block mb-6">
-						Official Press Kit — {artist.pressKitYear}
+						{artist.sections.hero.subtitle} — {artist.pressKitYear}
 					</span>
 					<h1 className="hero-name flex flex-col">
-						<span>ME</span>
-						<span className="md:ml-24 opacity-80">CIE</span>
+						<span>{artist.sections.hero.nameParts[0]}</span>
+						<span className="md:ml-24 opacity-80">{artist.sections.hero.nameParts[1]}</span>
 					</h1>
 				</motion.div>
 

@@ -25,16 +25,16 @@ export default function Contact() {
 				<div className="lg:col-span-7 p-8 md:p-16 flex flex-col justify-between min-h-[500px] border-b lg:border-b-0 lg:border-r border-white/10">
 					<div>
 						<span className="font-mono text-[10px] tracking-[0.5em] text-accent uppercase block mb-8">
-							Booking Protocol / Inquiry
+							{artist.sections.contact.subtitle}
 						</span>
 						<motion.h2
 							initial={{ y: 30, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
 							className="text-6xl md:text-9xl font-black tracking-tighter uppercase italic leading-[0.8] mb-12"
 						>
-							LET'S
+							{artist.sections.contact.title.split(' ')[0]}
 							<br />
-							TALK<span className="not-italic text-accent">.</span>
+							{artist.sections.contact.title.split(' ')[1]}<span className="not-italic text-accent">.</span>
 						</motion.h2>
 					</div>
 
@@ -44,7 +44,7 @@ export default function Contact() {
 						transition={{ delay: 0.3 }}
 					>
 						<p className="text-sm font-mono text-text-secondary uppercase tracking-[0.2em] mb-4">
-							Direct Mailbox:
+							{artist.sections.contact.emailLabel}
 						</p>
 						<a
 							href={mailtoLink}
@@ -61,7 +61,7 @@ export default function Contact() {
 				<div className="lg:col-span-5 flex flex-col">
 					<div className="p-8 md:p-16 border-b border-white/10">
 						<h3 className="text-xs font-mono uppercase tracking-[0.4em] text-accent mb-12">
-							Digital Network
+							{artist.sections.contact.socialTitle}
 						</h3>
 						<div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-12">
 							{socialLinks.map((link, index) => (
@@ -92,9 +92,9 @@ export default function Contact() {
 							{artist.location}
 						</p>
 						<p className="text-2xl md:text-4xl font-black tracking-tighter uppercase italic leading-none">
-							{artist.name.toUpperCase()} ARCHIVE
+							{artist.name.toUpperCase()} {artist.sections.contact.archiveTitle}
 							<br />
-							VERSION {artist.pressKitYear}
+							{artist.sections.contact.versionLabel} {artist.pressKitYear}
 						</p>
 					</div>
 				</div>
