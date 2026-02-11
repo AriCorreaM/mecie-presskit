@@ -102,7 +102,7 @@ export default function Gallery({ photos }: { photos: Photo[] }) {
 								src={photo.src}
 								alt={photo.alt}
 								fill
-								className="object-contain transition-transform duration-1000 hover:scale-105"
+								className="object-cover transition-transform duration-1000 hover:scale-105"
 								sizes="(max-width: 768px) 100vw, 50vw"
 							/>
 							{/* Overlay de número de archivo */}
