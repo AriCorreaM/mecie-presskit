@@ -39,8 +39,8 @@ export const artist = {
 
 	// Images
 	images: {
-		hero: '/images/about/hero1.png',
-		about: '/images/about/about.jpeg',
+		hero: '/images/hero.jpeg',
+		about: '/images/about/about1.jpeg',
 		ogImage: '/images/og-image.jpg',
 	},
 
@@ -161,6 +161,7 @@ export const artist = {
 		'La Feria',
 		'Club Room',
 		'Santo Remedio',
+		'Misa',
 		'Trnsts',
 		'Club Ambar',
 		'Miniroom',
@@ -175,6 +176,7 @@ export const artist = {
 		'Paralelo 86',
 		'Fabian Argomedo',
 		'Mañungo',
+		'Aldo Cadiz',
 		'Ricardo Molinari',
 		'Javier Labarca',
 		'Sepha',
@@ -183,7 +185,7 @@ export const artist = {
 		'Pietro Mengarelli',
 		'Fidel Santelices',
 		'Koto Barrueto',
-		'Agust',
+		'Agustt',
 		'Lunik',
 		'Jay Jay Cousin',
 		'Jay M',
@@ -245,6 +247,10 @@ export const artist = {
 			spotifyTrackId: '4WWuKPviSAX2PDotRhqwu7',
 		},
 		{
+			title: 'Little Helper 423-3',
+			spotifyTrackId: '5GFw0lD75qI8fnFqlXQN32',
+		},
+		{
 			title: 'Fire (Koto Barrueto Remix)',
 			spotifyTrackId: '24R50zzx7Avof3MTtGJxWC',
 		},
@@ -255,6 +261,14 @@ export const artist = {
 		{
 			title: 'Eterio - Original Mix',
 			spotifyTrackId: '3YOcueJoSbF7VY6c3mH3NC',
+		},
+		{
+			title: 'Hot News - Original Mix',
+			spotifyTrackId: '57fkxSCDqt2WcMH08gNgL6',
+		},
+		{
+			title: 'Eye Contact',
+			spotifyTrackId: '2u9igAJhCRqMrp2j79xEpx',
 		},
 	],
 

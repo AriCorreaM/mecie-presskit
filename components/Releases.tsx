@@ -46,7 +46,7 @@ export default function Releases() {
 									frameBorder="0"
 									allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 									loading="lazy"
-									className="grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
+									className=""
 								/>
 							</div>
 						</motion.div>

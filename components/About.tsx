@@ -47,12 +47,12 @@ export default function About() {
 
       {/* 3. Imagen y Tags (Layout Desplazado) */}
       <div className="grid grid-cols-1 md:grid-cols-12 w-full">
-        <div className="md:col-span-7 relative h-[500px] md:h-[700px] grayscale contrast-150 border-r border-white/10">
+        <div className="md:col-span-7 relative h-[500px] md:h-[700px] grayscale contrast-125 opacity-80 border-r border-white/10">
           <Image
             src={artist.images.about}
             alt={artist.name}
             fill
-            className="object-cover"
+            className="object-contain"
             sizes="60vw"
           />
           {/* Overlay de grano sutil solo en la imagen */}

@@ -7,12 +7,12 @@ export default function Hero() {
 		<section className="relative min-h-[110vh] flex flex-col justify-between p-6 md:p-12 overflow-hidden border-b border-white/5">
 			{/* Fondo: Imagen de montaña con mucho contraste (Ref: image_a0c157) */}
 			<div className="absolute inset-0 z-0">
-				<div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/80 to-background" />
+				<div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background" />
 				{/* Asegúrate que esta sea B&N y alto contraste */}
 				<img
 					src={artist.images.hero}
 					alt={`${artist.name} Background`}
-					className="w-full h-full object-cover grayscale contrast-125 opacity-40"
+					className="w-full h-full object-cover grayscale contrast-125 opacity-80"
 				/>
 			</div>
 
