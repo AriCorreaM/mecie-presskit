@@ -7,6 +7,8 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { artist } from '@/data/artist';
 
 export default function Gallery() {
+	const INITIAL_COUNT = 4;
+	const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
 	const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
 	const openLightbox = (index: number) => {
@@ -71,7 +73,7 @@ export default function Gallery() {
 
 				{/* Cuadrícula Rota Estilo Brutalista */}
 				<div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-					{artist.gallery.map((photo, index) => (
+					{artist.gallery.slice(0, visibleCount).map((photo, index) => (
 						<motion.div
 							key={photo.src}
 							initial={{ opacity: 0, scale: 0.95 }}
@@ -79,7 +81,7 @@ export default function Gallery() {
 							viewport={{ once: true }}
 							onClick={() => openLightbox(index)}
 							className={`
-                relative cursor-pointer overflow-hidden grayscale contrast-125 hover:grayscale-0 transition-all duration-700
+                relative cursor-pointer overflow-hidden transition-all duration-700
                 ${
 									index % 4 === 0
 										? 'md:col-span-8 aspect-[16/9]'
@@ -105,6 +107,17 @@ export default function Gallery() {
 						</motion.div>
 					))}
 				</div>
+
+				{visibleCount < artist.gallery.length && (
+					<div className="flex justify-center mt-12">
+						<button
+							onClick={() => setVisibleCount(artist.gallery.length)}
+							className="border border-white/20 px-8 py-3 text-[10px] uppercase tracking-[0.5em] font-mono hover:bg-white hover:text-black transition-colors duration-500"
+						>
+							Cargar más
+						</button>
+					</div>
+				)}
 			</div>
 
 			{/* Lightbox Minimalista */}
@@ -163,7 +176,7 @@ export default function Gallery() {
 								src={artist.gallery[selectedIndex].src}
 								alt={artist.gallery[selectedIndex].alt}
 								fill
-								className="object-contain grayscale brightness-90"
+								className="object-contain"
 								priority
 							/>
 						</motion.div>

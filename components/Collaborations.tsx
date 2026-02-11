@@ -39,7 +39,7 @@ export default function Collaborations() {
 						<motion.h2
 							initial={{ y: 30, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
-							className="text-6xl md:text-9xl font-black tracking-tighter uppercase italic leading-[0.8]"
+							className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic leading-[0.8]"
 						>
 							{artist.sections.collaborations.title.split(' ').map((word, i) => (
 								<span key={i}>

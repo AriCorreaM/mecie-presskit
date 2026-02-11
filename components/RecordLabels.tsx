@@ -43,7 +43,7 @@ export default function RecordLabels() {
 
 							{/* Logo y Nombre */}
 							<div className="flex flex-col gap-6">
-								<div className="relative w-16 h-16 grayscale contrast-125 brightness-75 group-hover:brightness-0 transition-all duration-500">
+								<div className="relative w-16 h-16 group-hover:brightness-0 transition-all duration-500">
 									<Image
 										src={label.logo}
 										alt={label.name}
