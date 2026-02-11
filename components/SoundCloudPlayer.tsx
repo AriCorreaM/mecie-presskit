@@ -45,7 +45,7 @@ export default function SoundCloudPlayer() {
 								allow="autoplay"
 								src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/mecie_91&color=%23000000&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
 								title="SoundCloud Player - Mecie"
-								className="grayscale contrast-125 brightness-75 hover:brightness-100 transition-all duration-700"
+								className=""
 							/>
 						</motion.div>
 
