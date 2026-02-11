@@ -6,7 +6,12 @@ import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { artist } from '@/data/artist';
 
-export default function Gallery() {
+interface Photo {
+	src: string;
+	alt: string;
+}
+
+export default function Gallery({ photos }: { photos: Photo[] }) {
 	const INITIAL_COUNT = 4;
 	const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
 	const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -22,14 +27,14 @@ export default function Gallery() {
 	const goToPrevious = useCallback(() => {
 		if (selectedIndex === null) return;
 		setSelectedIndex(
-			selectedIndex === 0 ? artist.gallery.length - 1 : selectedIndex - 1,
+			selectedIndex === 0 ? photos.length - 1 : selectedIndex - 1,
 		);
 	}, [selectedIndex]);
 
 	const goToNext = useCallback(() => {
 		if (selectedIndex === null) return;
 		setSelectedIndex(
-			selectedIndex === artist.gallery.length - 1 ? 0 : selectedIndex + 1,
+			selectedIndex === photos.length - 1 ? 0 : selectedIndex + 1,
 		);
 	}, [selectedIndex]);
 
@@ -73,7 +78,7 @@ export default function Gallery() {
 
 				{/* Cuadrícula Rota Estilo Brutalista */}
 				<div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-					{artist.gallery.slice(0, visibleCount).map((photo, index) => (
+					{photos.slice(0, visibleCount).map((photo, index) => (
 						<motion.div
 							key={photo.src}
 							initial={{ opacity: 0, scale: 0.95 }}
@@ -81,15 +86,15 @@ export default function Gallery() {
 							viewport={{ once: true }}
 							onClick={() => openLightbox(index)}
 							className={`
-                relative cursor-pointer overflow-hidden transition-all duration-700
+                relative cursor-pointer overflow-hidden transition-all duration-700 aspect-[4/3]
                 ${
 									index % 4 === 0
-										? 'md:col-span-8 aspect-[16/9]'
+										? 'md:col-span-8'
 										: index % 4 === 1
-											? 'md:col-span-4 aspect-square'
+											? 'md:col-span-4'
 											: index % 4 === 2
-												? 'md:col-span-5 aspect-[4/5]'
-												: 'md:col-span-7 aspect-[16/7]'
+												? 'md:col-span-5'
+												: 'md:col-span-7'
 								}
               `}
 						>
@@ -97,7 +102,7 @@ export default function Gallery() {
 								src={photo.src}
 								alt={photo.alt}
 								fill
-								className="object-cover transition-transform duration-1000 hover:scale-105"
+								className="object-contain transition-transform duration-1000 hover:scale-105"
 								sizes="(max-width: 768px) 100vw, 50vw"
 							/>
 							{/* Overlay de número de archivo */}
@@ -108,10 +113,10 @@ export default function Gallery() {
 					))}
 				</div>
 
-				{visibleCount < artist.gallery.length && (
+				{visibleCount < photos.length && (
 					<div className="flex justify-center mt-12">
 						<button
-							onClick={() => setVisibleCount(artist.gallery.length)}
+							onClick={() => setVisibleCount(photos.length)}
 							className="border border-white/20 px-8 py-3 text-[10px] uppercase tracking-[0.5em] font-mono hover:bg-white hover:text-black transition-colors duration-500"
 						>
 							Cargar más
@@ -133,7 +138,7 @@ export default function Gallery() {
 						{/* Controles del Lightbox */}
 						<div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-[110]">
 							<span className="font-mono text-[10px] tracking-widest">
-								{selectedIndex + 1} / {artist.gallery.length}
+								{selectedIndex + 1} / {photos.length}
 							</span>
 							<button
 								onClick={closeLightbox}
@@ -173,8 +178,8 @@ export default function Gallery() {
 							onClick={(e) => e.stopPropagation()}
 						>
 							<Image
-								src={artist.gallery[selectedIndex].src}
-								alt={artist.gallery[selectedIndex].alt}
+								src={photos[selectedIndex].src}
+								alt={photos[selectedIndex].alt}
 								fill
 								className="object-contain"
 								priority
@@ -184,7 +189,7 @@ export default function Gallery() {
 						{/* Texto de metadata en el pie del lightbox */}
 						<div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 max-w-xs">
 							<p className="text-[10px] uppercase tracking-[0.4em] text-text-secondary">
-								{artist.gallery[selectedIndex].alt || artist.sections.gallery.fallbackAlt}
+								{photos[selectedIndex].alt || artist.sections.gallery.fallbackAlt}
 							</p>
 						</div>
 					</motion.div>
