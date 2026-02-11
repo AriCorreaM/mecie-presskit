@@ -86,7 +86,7 @@ export const artist = {
 		},
 		releases: {
 			title: 'RELEASES',
-			subtitle: 'Digital / Sonic Catalog',
+			subtitle: 'Digital Catalog',
 			refPrefix: 'REF. MC-',
 			spotifyCard: {
 				label: 'Protocol / External Link',
@@ -109,8 +109,8 @@ export const artist = {
 			},
 		},
 		collaborations: {
-			title: 'COLLABS',
-			subtitle: 'Creative Network / Archive',
+			title: 'COMPARTIDO ESCENARIO CON',
+			subtitle: 'Shared Stage With / Archive',
 		},
 		techRider: {
 			title: 'EQUIPMENT',

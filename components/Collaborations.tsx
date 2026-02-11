@@ -41,9 +41,13 @@ export default function Collaborations() {
 							whileInView={{ y: 0, opacity: 1 }}
 							className="text-6xl md:text-9xl font-black tracking-tighter uppercase italic leading-[0.8]"
 						>
-							{artist.sections.collaborations.title.slice(0, 4)}
-							<br />
-							{artist.sections.collaborations.title.slice(4)}<span className="not-italic">.</span>
+							{artist.sections.collaborations.title.split(' ').map((word, i) => (
+								<span key={i}>
+									{word}
+									{i < artist.sections.collaborations.title.split(' ').length - 1 && <br />}
+								</span>
+							))}
+							<span className="not-italic">.</span>
 						</motion.h2>
 					</div>
 
